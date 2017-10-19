@@ -1,0 +1,17 @@
+admin-email = theo@opsmen.nl
+ssl-set-org = MyOrg		
+ssl-set-org-unit = spacewalkou		
+ssl-set-city = City	
+ssl-set-state = State
+ssl-set-country = NL
+ssl-password = spacewalk
+ssl-set-email = theo@opsmen.nl
+ssl-config-sslvhost = Y
+db-backend=postgresql
+db-name=spaceschema
+db-user=spaceuser
+db-password=spacepw
+db-host=postgresql-host
+db-port=5432
+enable-tftp=Y
+

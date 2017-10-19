@@ -1,0 +1,20 @@
+---
+- name: Install needed packages for installation
+  package: name={{ item }} state=latest
+  with_items:
+    - libselinux-python
+    - nmap
+  tags:
+    - prepare
+
+# docker have to be configured by manual
+- name: Check if service Docker running
+  shell: |
+    # vg=$( vgdisplay | grep 'VG Name' | head -n 1 | sed 's/^\s\+VG Name\s\+\(.*\)$/\1/' )
+    # echo VG='$vg' >> /etc/sysconfig/docker-storage-setup
+    # echo AUTO_EXTEND_POOL='true' >> /etc/sysconfig/docker-storage-setup
+    # docker-storage-setup
+    systemctl status docker
+  tags:
+    - prepare
+
