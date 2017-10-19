@@ -20,7 +20,7 @@ RUN yum install -y yum-plugin-copr && \
     yum remove -y yum-plugin-copr && \
     yum clean all
 
-ADD answer.txt /theo/vagrant/answer.txt
+ADD answer.txt /root/answer.txt
 ADD bin/ /root/
 
 RUN chmod a+x /root/docker-spacewalk-{run,setup}.sh /root/spacewalk-hostname-rename.sh
